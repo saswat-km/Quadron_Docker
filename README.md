@@ -56,12 +56,11 @@ to output file name is '/Users/kxk302/workspace/Quadron_Docker/output/test_out.t
 Suppose you want Quadron to use 8 CPUs. 
 
 To run the containerized version of Quadron, run the following command:	
-> docker run -v <InputFileAbsolutePath>:/<InputFileName> -v <OutputFileFolder>:/output kxk302/quadron:1.0.0 /<InputFileName> /output/<OutputFileName> <NumberOfCPUs>
+> ./scripts/run_quadron.sh <InputFileAbsolutePath> <OutputFileAbsolutePath> <NumberOfCPUs>
 
-Below is an actual invocation of Dockerzed Quadron:
-> docker run -v ./input/test.fasta:/test.fasta -v ./output:/output kxk302/quadron:1.0.0 /test.fasta /output/test_out.txt 8 1000000
+For example:
 
-The -v flag simply mounts a folder on your host machine to the container, to make your local files accessible to the container.
+> ./scripts/run_quadron.sh  /Users/kxk302/workspace/Quadron_Docker/input/test.fasta /Users/kxk302/workspace/Quadron_Docker/output/test_out.txt 8
 
 # References
 
