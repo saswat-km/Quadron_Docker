@@ -6,7 +6,7 @@ a sequence. Quadron is written in R programming language. The source code is ava
 Running Quadron requires installation of a specific version of R, specific versions of several R packages as depenecies, downloading
 Quadron source code from the Github repository, installing xgboost library, and bit compiling the Quadron package -- These steps 
 take a lot of time. In this project, we Dockerize Quadron to avoid repeating all these configuration steps everytime a user wants 
-to run Quadron. A itext file called Dockerfile is used to specify all the configuration steps. A Docker engine creates a Docker 
+to run Quadron. A text file called Dockerfile is used to specify all the configuration steps. A Docker engine creates a Docker 
 image from the Dockerfile. Docker engine runs containers created off of the docker image. Container technologies such as Docker 
 also offer other benefits such as portability, performance, agility, isolation, and scalability [2].
 
@@ -49,7 +49,7 @@ Suppose you want to run Quadron on a .fasta file located at '/Users/kxk302/works
 The input file name is 'test.fasta', the input file folder is '/Users/kxk302/workspace/Quadron_Docker/input/', and absolute path
 to input file name is '/Users/kxk302/workspace/Quadron_Docker/input/test.fasta'.  
 
-Suppose you want Quadron to save output file at '/Users/kxk302/workspace/Quadron_Docker/output/test_out.txt'. The output file 
+Suppose you want Quadron to save the output file at '/Users/kxk302/workspace/Quadron_Docker/output/test_out.txt'. The output file 
 name is 'test_out.txt', the output file folder is '/Users/kxk302/workspace/Quadron_Docker/output/', and absolute path
 to output file name is '/Users/kxk302/workspace/Quadron_Docker/output/test_out.txt'.
 
