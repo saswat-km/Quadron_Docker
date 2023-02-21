@@ -64,7 +64,7 @@ For example:
 
 On Windows, to run the containerized version of Quadron, run the following command:
 
-> docker run -v <InputFileAbsolutePath>:/<InputFileName> -v <OutputFileFolder>:/output kxk302/quadron:1.0.0 /<InputFileName> /output/<OutputFileName> <NumberOfCPUs>
+> docker run -v InputFileAbsolutePath:/InputFileName -v OutputFileFolder:/output kxk302/quadron:1.0.0 /InputFileName /output/OutputFileName NumberOfCPUs
 
 Below is an actual invocation of Dockerzed Quadron:
 > docker run -v ./input/test.fasta:/test.fasta -v ./output:/output kxk302/quadron:1.0.0 /test.fasta /output/test_out.txt 8 1000000
