@@ -56,7 +56,7 @@ to output file name is '/Users/kxk302/workspace/Quadron_Docker/output/test_out.t
 Suppose you want Quadron to use 8 CPUs. 
 
 On Unix/Mac OS, to run the containerized version of Quadron, run the following command:
-> ./scripts/run_quadron.sh <InputFileAbsolutePath> <OutputFileAbsolutePath> <NumberOfCPUs>
+> ./scripts/run_quadron.sh InputFileAbsolutePath OutputFileAbsolutePath NumberOfCPUs
 
 For example:
 
