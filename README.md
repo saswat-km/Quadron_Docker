@@ -17,7 +17,7 @@ you can skip the instructions for building/pushing the image, and go to the inst
 
 # Getting the Quadron Docker Image
 
-To pull the Quadron Docker image from your Docker Hub repository:
+To pull the Quadron Docker image from the Docker Hub repository:
 > docker pull kxk302/quadron:1.0.0
 
 To view the pulled image:
@@ -39,7 +39,7 @@ To create a Docker image:
 To view the created image:
 > docker images -f "reference=kxk302/quadron:1.0.0"
 
-To push the created image to your Docker Hub repository (You need to regsitered at https://hub.docker.com/):
+To push the created image to your Docker Hub repository (You need to be regsitered at https://hub.docker.com/):
 > docker login\
 > docker push kxk302/quadron:1.0.0
 
