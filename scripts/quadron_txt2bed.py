@@ -1,14 +1,26 @@
-import sys
+import argparse
 
-data = open(sys.argv[1], 'r')
-data = data.readlines()
+def textToBed(input_text_file, output_bed_file, chromosome_number):
+  data = open(input_text_file, 'r')
+  data = data.readlines()
 
-f = open(sys.argv[2],"w") 
+  f = open(output_bed_file, "w")
 
-adjust = 1 #adjust for quadron to bed conversion: bed file is zero-based
-for i in range(0,len(data)):
-    crit = data[i].split()
-    if crit[0] == "DATA:" and crit[4] != "NA":
-        start = int(crit[1])
-        length = int(crit[3])
-        f.write("chrX\t%i\t%i\t%.2f\t%s\t%i\n" %(start-adjust, length+start-adjust, float(crit[4]), crit[2], length))
+  adjust = 1 #adjust for quadron to bed conversion: bed file is zero-based
+  for i in range(0, len(data)):
+      crit = data[i].split()
+      if crit[0] == "DATA:" and crit[4] != "NA":
+          start = int(crit[1])
+          length = int(crit[3])
+          f.write("chr%s\t%i\t%i\t%.2f\t%s\t%i\n" %(chromosome_number, start-adjust, length+start-adjust, float(crit[4]), crit[2], length))
+
+
+if __name__ == "__main__":
+  argParser = argparse.ArgumentParser()
+
+  argParser.add_argument("-i", "--input_text_file", type=str, required=True)
+  argParser.add_argument("-o", "--output_bed_file", type=str, required=True)
+  argParser.add_argument("-n", "--chromosome_number", type=str, required=True)
+  args = argParser.parse_args()
+
+  textToBed(args.input_text_file, args.output_bed_file, args.chromosome_number)
