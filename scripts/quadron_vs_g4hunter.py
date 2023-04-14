@@ -89,8 +89,7 @@ if __name__ == "__main__":
   argumentParser.add_argument("-s", "--species", type=str, required=True, default="hsapiens", choices=["hsapiens"])
 
   args = argumentParser.parse_args()
-  quadron_vs_g4hunter(args.quadron_dir, args.g4hunter_dir, args.chromosome_num, args.overlap_percentage,
-                      args.g4hunter_window_size, args.g4hunter_threshold, args.output_dir, args.species)
+  quadron_vs_g4hunter(args.quadron_dir, args.g4hunter_dir, args.chromosome_num, args.overlap_percentage, args.g4hunter_window_size, args.g4hunter_threshold, args.output_dir, args.species)
 
 
 
