@@ -15,5 +15,5 @@ do
   file_name=$(basename ${file_path})
   chromosome=${file_name%%_out.txt}
   echo "Chromosome: <$chromosome>"
-  python3 ./scripts/quadron_txt2bed.py -i ${file_path} -o ${OutputFolder}/${file_name/_out.txt/.bed} -n chromosome
+  python3 ./scripts/quadron_txt2bed.py -i ${file_path} -o ${OutputFolder}/${file_name/_out.txt/_GQ.tsv} -n $chromosome
 done
