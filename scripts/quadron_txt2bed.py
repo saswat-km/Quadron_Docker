@@ -15,7 +15,7 @@ def textToBed(input_text_file, output_bed_file, chromosome_name):
       if crit[0] == "DATA:" and crit[4] != "NA":
           start = int(crit[1])
           length = int(crit[3])
-          f.write("%s\t%i\t%i\t%.2f\t%s\t%i\n" %(chromosome_name, start-adjust, length+start-adjust-1, float(crit[4]), crit[2], length))
+          f.write("%s\t%i\t%i\t%.2f\t%s\t%i\n" %(chromosome_name, start-adjust, length+start-adjust, float(crit[4]), crit[2], length))
 
 
 if __name__ == "__main__":
